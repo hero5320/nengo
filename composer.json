@@ -1,0 +1,26 @@
+{
+    "name": "hero5320/nengo",
+    "description": "Convert to Japanese and Western calendars",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hero5320\\Nengo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hero555",
+            "email": "zerozero5320@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "monolog/monolog": "^2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "psy/psysh": "@stable"
+    }
+}
