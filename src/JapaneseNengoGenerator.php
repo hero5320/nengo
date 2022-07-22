@@ -38,8 +38,8 @@ class JapaneseNengoGenerator
 
         $dt = '';
         try {
-            $dt = new DateTime($time);
-        } catch (Exception $e) {
+            $dt = new \DateTime($time);
+        } catch (\Exception $e) {
              // 日付型の指定でない
              echo $e->getMessage();
         }
@@ -52,7 +52,7 @@ class JapaneseNengoGenerator
             ];
 
             foreach ($era_list as $era) {
-                $dt_era = new DateTime($era['time']);
+                $dt_era = new \DateTime($era['time']);
                 if ($dt->format('Ymd') >= $dt_era->format('Ymd')) {
                     $result['year'] = sprintf('%02d', $dt->format('Y') - $dt_era->format('Y') + 1);
                     $result['wareki'] = $era['jp'];
@@ -92,9 +92,9 @@ class JapaneseNengoGenerator
             }
 
             return [
-                'year' => $year ,
-                'month' => $month,
-                'day' => $day
+                'year' => sprintf('%04d', $year),
+                'month' => sprintf('%02d', $month),
+                'day' => sprintf('%02d', $day)
             ];
         }
         return [];

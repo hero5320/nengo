@@ -8,6 +8,14 @@
             "Hero5320\\Nengo\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Hero5320\\Nengo\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
     "authors": [
         {
             "name": "hero555",
